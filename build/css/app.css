@@ -1,20 +1,81 @@
+@font-face {
+  font-family: "Maven";
+  src: url("../fonts/static/MavenPro-Black.ttf") format("truetype");
+}
 
-
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-*::before{
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: ;
+  box-sizing: border-box;
 }
 
 
-img{
-  width: 6rem;
-  height:6rem;
+:root {
+  --font: "Maven", sans-serif;
+  --telefono: 480px;
+  --tablet: 768px;
+  --desktop: 992px;
+  --desktopXL: 1200px;
+  --rojo: #840e0e;
+  --blanco: #ffffff;
+  --amarillo: rgb(255, 196, 59);
 }
+
+h2,
+h3 {
+  margin: 0 0 7rem 0;
+}
+
+h3 {
+  font-family: var(--font);
+  font-size: 3.4rem;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*header*/
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--rojo);
+  font-family: var(--font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--amarillo);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.875rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--amarillo);
+}
+
+.nav-list a:hover {
+  color: var(--rojo);
+  transition: 0.5s;
+}
+
